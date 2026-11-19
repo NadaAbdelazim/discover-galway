@@ -1,0 +1,153 @@
+/* Discover Galway: shared design and layout */
+:root {
+  --galway-green: #24613e;
+  --galway-dark: #19472d;
+  --galway-pale: #f5f9f3;
+  --galway-border: #d8e3d5;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #26342b;
+  background: #fcfdfb;
+}
+
+header {
+  padding: 34px 20px 28px;
+  background: var(--galway-green);
+  color: white;
+  text-align: center;
+}
+header h1 { margin-bottom: 8px; font-weight: 700; }
+header p { margin-bottom: 0; }
+
+nav, footer {
+  padding: 14px 20px;
+  background: #e1eddf;
+  text-align: center;
+}
+nav a {
+  color: var(--galway-dark);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+nav a:hover, nav a:focus-visible {
+  background: #cfdfca;
+  text-decoration: underline;
+}
+nav a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--galway-dark);
+  outline-offset: 2px;
+}
+
+main.container {
+  max-width: 1050px;
+  padding: 38px 24px 56px;
+}
+main > section + section { margin-top: 36px; }
+main > h2 { margin-bottom: 14px; }
+main > p { margin-bottom: 24px; }
+h2, h3, .success { color: var(--galway-green); }
+h2 { margin-bottom: 14px; line-height: 1.3; }
+h3 { font-size: 1.2rem; line-height: 1.35; }
+p { margin-bottom: 14px; }
+main a:not(.btn) { color: var(--galway-green); }
+main a:not(.btn):hover { color: var(--galway-dark); }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 8px;
+}
+
+/* Experiences and trip-planning cards */
+.card {
+  padding: 22px;
+  border: 1px solid var(--galway-border);
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(20, 55, 33, 0.05);
+}
+.card h3 { margin-bottom: 14px; }
+.card p { margin-bottom: 10px; }
+.card p:last-child { margin-bottom: 0; }
+.planning-cards .card { background: var(--galway-pale); }
+#experienceList .card { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+#experienceList .card:hover { box-shadow: 0 7px 20px rgba(20, 55, 33, 0.12); transform: translateY(-2px); }
+
+/* Filter panel */
+.filters {
+  padding: 20px;
+  margin-bottom: 24px;
+  background: var(--galway-pale);
+  border: 1px solid var(--galway-border);
+  border-radius: 10px;
+}
+.filters label { font-weight: 600; margin: 0 8px 8px 0; }
+.filters select { margin-right: 16px; }
+.filters #resultsCount { margin: 8px 0 0; }
+
+/* Checklist */
+.check { display: block; padding: 5px 0; }
+.packing-item { margin-right: 8px; accent-color: var(--galway-green); }
+#packingStatus { margin-top: 12px; font-weight: 600; }
+
+/* Consistent buttons and form fields */
+.btn-success, button:not(.btn) {
+  background: var(--galway-green);
+  border-color: var(--galway-green);
+  color: white;
+}
+.btn-success:hover, .btn-success:focus,
+button:not(.btn):hover { background: var(--galway-dark); border-color: var(--galway-dark); color: white; }
+.btn-outline-success { color: var(--galway-green); border-color: var(--galway-green); }
+.btn-outline-success:hover { background: var(--galway-green); border-color: var(--galway-green); color: white; }
+.btn { padding: 10px 18px; font-weight: 600; }
+form label { font-weight: 600; }
+#enquiryForm, #budgetForm { max-width: 650px; }
+#enquiryForm .form-control, #enquiryForm .form-select,
+#budgetForm .form-control { margin-bottom: 0; padding: 10px 12px; }
+.field-error, .error { color: #a11616; }
+.field-error { margin: 5px 0 0; font-size: 0.9rem; }
+.field-error:empty { display: none; }
+
+/* Budget calculator */
+.calculator-section {
+  padding: 28px;
+  background: var(--galway-pale);
+  border: 1px solid var(--galway-border);
+  border-radius: 10px;
+}
+.budget-result {
+  padding: 20px;
+  background: white;
+  border-left: 4px solid var(--galway-green);
+  border-radius: 6px;
+}
+
+footer p { margin-bottom: 0; }
+
+@media (max-width: 767px) {
+  header { padding: 26px 16px 22px; }
+  main.container { padding: 28px 18px 42px; }
+  .card { padding: 18px; }
+  .calculator-section { padding: 20px; }
+  .filters { padding: 16px; }
+}
+@media (max-width: 575px) {
+  nav { gap: 4px !important; }
+  nav a { padding: 7px 9px; }
+  .calculator-section { padding: 16px; }
+  #budgetForm .btn { margin: 6px 8px 0 0 !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #experienceList .card { transition: none; }
+  #experienceList .card:hover { transform: none; }
+}
