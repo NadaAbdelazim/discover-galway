@@ -53,3 +53,26 @@ button {
   cursor: pointer;
 }
 .error { color: #a11616; }
+
+nav a { font-weight: 600; }
+nav a:hover, nav a:focus { text-decoration: underline; }
+/* Cards, including the trip-planning sections */
+.planning-cards .card { background-color: #f7faf6; }
+/* Form and budget styling */
+.btn-success { background-color: #24613e; border-color: #24613e; }
+.btn-success:hover, .btn-success:focus { background-color: #19472d; border-color: #19472d; }
+.btn-outline-success { color: #24613e; border-color: #24613e; }
+.field-error { color: #a11616; }
+.field-error { margin: 4px 0 0; font-size: 0.9rem; }
+.field-error:empty { display: none; }
+.calculator-section { padding: 20px; background: #f7faf6; border: 1px solid #d4e3d1; border-radius: 8px; }
+.budget-result { padding: 16px; background: white; border-left: 4px solid #24613e; }
+@media (max-width: 575px) {
+  main { padding: 16px; }
+  .calculator-section { padding: 15px; }
+  nav { gap: 10px !important; }
+}
+
+#enquiryForm, #budgetForm { max-width: 650px; }
+#enquiryForm .form-control, #enquiryForm .form-select,
+#budgetForm .form-control { margin-bottom: 0; }
