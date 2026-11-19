@@ -3,40 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Emerald Escapes</title>
+  <title>Discover Galway | Galway City and Connemara</title>
+  <meta name="description" content="Explore Galway City and Connemara, from the Latin Quarter and Salthill promenade to Connemara National Park.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Emerald Escapes</h1>
-    <p>Holidays and short trips around Ireland</p>
+    <h1>Discover Galway</h1>
+    <p>Galway City and Connemara</p>
   </header>
-  <nav aria-label="Main navigation">
+  <nav class="d-flex flex-wrap justify-content-center gap-3" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="experiences.html">Experiences</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <main>
+  <main class="container">
     <section>
-      <h2>Explore More. Discover Ireland.</h2>
-      <p>Enjoy Ireland's cities, countryside and coast.</p>
-      <img src="assets/ireland.jpg" alt="Grass-covered Irish coastal cliffs beside the Atlantic Ocean">
+      <h2>Explore Galway City and Connemara</h2>
+      <p>Explore Galway City's streets, walk along Galway Bay, or head west to the mountains and coast of Connemara.</p>
+      <img class="img-fluid" src="assets/ireland.jpg" alt="Grass-covered Irish coastal cliffs beside the Atlantic Ocean">
     </section>
     <section>
       <h2>About us</h2>
-      <p>Emerald Escapes is a fictional Irish travel company. We help visitors find short trips and discover interesting places around Ireland.</p>
-      <p>Our trips are suitable for families, couples and anyone who enjoys exploring new places.</p>
+      <p>Discover Galway is a student travel guide to Galway City and Connemara.</p>
+      <p>Find ideas for family outings, walks and day trips.</p>
     </section>
     <section>
-      <h2>Our trips</h2>
+      <h2>Where to go</h2>
       <ul>
-        <li>City breaks in Dublin, Cork and Kilkenny</li>
-        <li>Coastal trips along the Wild Atlantic Way</li>
-        <li>Quiet stays in the countryside</li>
-        <li>Family activities and cultural visits</li>
+        <li>Explore the Latin Quarter and Spanish Arch in Galway City</li>
+        <li>Walk the Salthill promenade towards Blackrock</li>
+        <li>Follow a trail in Connemara National Park</li>
+        <li>Visit Kylemore Abbey and its gardens</li>
       </ul>
-      <a href="experiences.html">View experiences</a>
+      <a class="btn btn-success" href="experiences.html">View experiences</a>
     </section>
     <section>
       <h2>Holiday checklist</h2>
@@ -45,7 +47,8 @@
       <label class="check"><input class="packing-item" type="checkbox" onchange="updateChecklist()"> Walking shoes</label>
       <label class="check"><input class="packing-item" type="checkbox" onchange="updateChecklist()"> Phone charger</label>
       <p id="packingStatus" aria-live="polite">0 of 3 items packed.</p>
-    </section>  </main>
-  <footer><p>&copy; 2026 Emerald Escapes | Nada Abdelazim</p></footer>
+    </section>
+  </main>
+  <footer><p>&copy; 2026 Discover Galway</p></footer>
 </body>
 </html>

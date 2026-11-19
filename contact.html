@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Emerald Escapes</title>
+  <title>Contact | Discover Galway</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Emerald Escapes</h1>
-    <p>Holidays and short trips around Ireland</p>
+    <h1>Discover Galway</h1>
+    <p>Galway City and Connemara</p>
   </header>
-  <nav aria-label="Main navigation">
+  <nav class="d-flex flex-wrap justify-content-center gap-3" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="experiences.html">Experiences</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <main>
+  <main class="container">
     <h2>Contact and booking enquiries</h2>
     <p>Complete the form below to check your enquiry details. All fields are required.</p>
     <!-- JavaScript checks the fields when the form is submitted. -->
@@ -38,10 +39,11 @@
       </select>
       <label for="message">Message (at least 20 characters)</label>
       <textarea id="message" name="message" rows="5" minlength="20" required></textarea>
-      <button type="submit">Check enquiry</button>
+      <button class="btn btn-success" type="submit">Check enquiry</button>
       <p id="formResponse" role="status" aria-live="polite"></p>
     </form>
-    <p>This is a practice form. It does not send or save your details.</p>  </main>
-  <footer><p>&copy; 2026 Emerald Escapes | Nada Abdelazim</p></footer>
+    <p>This is a practice form. It does not send or save your details.</p>
+  </main>
+  <footer><p>&copy; 2026 Discover Galway</p></footer>
 </body>
 </html>

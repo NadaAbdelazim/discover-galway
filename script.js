@@ -1,7 +1,7 @@
 function filterExperiences() {
   var category = document.getElementById("categoryFilter").value;
   var priceRange = document.getElementById("priceFilter").value;
-  var cards = document.getElementsByClassName("card");
+  var cards = document.querySelectorAll("#experienceList .col");
   var count = 0;
 
   for (var i = 0; i < cards.length; i++) {
