@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiences | Emerald Escapes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Emerald Escapes</h1>
+    <p>Holidays and short trips around Ireland</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <h2>Our experiences</h2>
+    <p>Choose a trip around Ireland. These sample prices are per person.</p>
+    <!-- Select a category and price, then apply the filters. -->
+    <section class="filters" aria-label="Experience filters">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All categories</option>
+        <option value="City">City</option>
+        <option value="Coastal">Coastal</option>
+        <option value="Countryside">Countryside</option>
+        <option value="Family">Family</option>
+        <option value="Cultural">Cultural</option>
+      </select>
+      <label for="priceFilter">Price:</label>
+      <select id="priceFilter">
+        <option value="all">All prices</option>
+        <option value="under50">Under &euro;50</option>
+        <option value="50to100">&euro;50 to &euro;100</option>
+        <option value="over100">Over &euro;100</option>
+      </select>
+      <button type="button" onclick="filterExperiences()">Apply filters</button>
+      <p id="resultsCount" aria-live="polite">Showing 15 experiences.</p>
+    </section>
+    <div class="cards">
+      <article class="card" data-category="City" data-price="89">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A Georgian weekend in Dublin</h3>
+        <p><strong>Location:</strong> Dublin City</p>
+        <p>Cobbled lanes, bookshops and a long, lively supper.</p>
+        <p><strong>Category:</strong> City</p>
+        <p><strong>Duration:</strong> 2 days</p>
+        <p><strong>Price:</strong> &euro;89 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Coastal" data-price="42">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>The Cliffs at golden hour</h3>
+        <p><strong>Location:</strong> County Clare</p>
+        <p>Follow the Atlantic edge as evening light spills over the cliffs.</p>
+        <p><strong>Category:</strong> Coastal</p>
+        <p><strong>Duration:</strong> Half day</p>
+        <p><strong>Price:</strong> &euro;42 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Countryside" data-price="145">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A quiet cabin in Connemara</h3>
+        <p><strong>Location:</strong> County Galway</p>
+        <p>Unplug beside a peat fire with mountain paths beyond your door.</p>
+        <p><strong>Category:</strong> Countryside</p>
+        <p><strong>Duration:</strong> 2 nights</p>
+        <p><strong>Price:</strong> &euro;145 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Cultural" data-price="35">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Galway street music stroll</h3>
+        <p><strong>Location:</strong> Galway City</p>
+        <p>Meet the makers, musicians and storytellers of the Latin Quarter.</p>
+        <p><strong>Category:</strong> Cultural</p>
+        <p><strong>Duration:</strong> 3 hours</p>
+        <p><strong>Price:</strong> &euro;35 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Coastal" data-price="78">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Salt air on the Aran Islands</h3>
+        <p><strong>Location:</strong> Inis M&#243;r, Galway</p>
+        <p>Cycle quiet roads between stone walls, sea views and a tea stop.</p>
+        <p><strong>Category:</strong> Coastal</p>
+        <p><strong>Duration:</strong> Full day</p>
+        <p><strong>Price:</strong> &euro;78 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Family" data-price="48">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Family farm and pony morning</h3>
+        <p><strong>Location:</strong> County Wicklow</p>
+        <p>Meet farm animals, try a pony ride and picnic in the orchard.</p>
+        <p><strong>Category:</strong> Family</p>
+        <p><strong>Duration:</strong> 3 hours</p>
+        <p><strong>Price:</strong> &euro;48 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="City" data-price="55">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A taste of Cork’s market</h3>
+        <p><strong>Location:</strong> Cork City</p>
+        <p>Sample local favourites and hear the stories behind beloved stalls.</p>
+        <p><strong>Category:</strong> City</p>
+        <p><strong>Duration:</strong> Half day</p>
+        <p><strong>Price:</strong> &euro;55 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Coastal" data-price="125">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>The Wild Atlantic Way</h3>
+        <p><strong>Location:</strong> County Donegal</p>
+        <p>Take the scenic road to sea stacks, far-flung beaches and a pub lunch.</p>
+        <p><strong>Category:</strong> Coastal</p>
+        <p><strong>Duration:</strong> Full day</p>
+        <p><strong>Price:</strong> &euro;125 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Cultural" data-price="64">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A castle, a garden, a story</h3>
+        <p><strong>Location:</strong> County Meath</p>
+        <p>Explore centuries of Irish history among stone walls and gardens.</p>
+        <p><strong>Category:</strong> Cultural</p>
+        <p><strong>Duration:</strong> Full day</p>
+        <p><strong>Price:</strong> &euro;64 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Family" data-price="39">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A lakeside family picnic</h3>
+        <p><strong>Location:</strong> County Kerry</p>
+        <p>Find a gentle shore walk, wildlife to spot and room to run around.</p>
+        <p><strong>Category:</strong> Family</p>
+        <p><strong>Duration:</strong> Half day</p>
+        <p><strong>Price:</strong> &euro;39 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Countryside" data-price="118">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A night in a stone cottage</h3>
+        <p><strong>Location:</strong> County Mayo</p>
+        <p>Wake to birdsong, rolling hills and a breakfast of local produce.</p>
+        <p><strong>Category:</strong> Countryside</p>
+        <p><strong>Duration:</strong> 1 night</p>
+        <p><strong>Price:</strong> &euro;118 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Cultural" data-price="72">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Waterford makers trail</h3>
+        <p><strong>Location:</strong> Waterford City</p>
+        <p>Step inside independent studios and discover the city’s craft.</p>
+        <p><strong>Category:</strong> Cultural</p>
+        <p><strong>Duration:</strong> 4 hours</p>
+        <p><strong>Price:</strong> &euro;72 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Coastal" data-price="95">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Sea kayaking in Kinsale</h3>
+        <p><strong>Location:</strong> County Cork</p>
+        <p>Paddle a sheltered harbour, spot old forts and float in for coffee.</p>
+        <p><strong>Category:</strong> Coastal</p>
+        <p><strong>Duration:</strong> 3 hours</p>
+        <p><strong>Price:</strong> &euro;95 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="City" data-price="52">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>A gentle day in Kilkenny</h3>
+        <p><strong>Location:</strong> Kilkenny City</p>
+        <p>Follow medieval lanes, riverside paths and a very good bakery trail.</p>
+        <p><strong>Category:</strong> City</p>
+        <p><strong>Duration:</strong> Full day</p>
+        <p><strong>Price:</strong> &euro;52 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+      <article class="card" data-category="Family" data-price="29">
+        <img src="assets/ireland.jpg" alt="Irish coastal cliffs beside the Atlantic Ocean">
+        <h3>Woodland wonders for all</h3>
+        <p><strong>Location:</strong> County Laois</p>
+        <p>Take an easy forest trail with nature clues and a hot chocolate finish.</p>
+        <p><strong>Category:</strong> Family</p>
+        <p><strong>Duration:</strong> 2 hours</p>
+        <p><strong>Price:</strong> &euro;29 per person</p>
+        <a href="contact.html">Enquire about this trip</a>
+      </article>
+    </div>
+  </main>
+  <footer><p>&copy; 2026 Emerald Escapes | Nada Abdelazim</p></footer>
+</body>
+</html>

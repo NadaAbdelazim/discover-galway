@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Emerald Escapes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Emerald Escapes</h1>
+    <p>Holidays and short trips around Ireland</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Explore More. Discover Ireland.</h2>
+      <p>Enjoy Ireland's cities, countryside and coast.</p>
+      <img src="assets/ireland.jpg" alt="Grass-covered Irish coastal cliffs beside the Atlantic Ocean">
+    </section>
+    <section>
+      <h2>About us</h2>
+      <p>Emerald Escapes is a fictional Irish travel company. We help visitors find short trips and discover interesting places around Ireland.</p>
+      <p>Our trips are suitable for families, couples and anyone who enjoys exploring new places.</p>
+    </section>
+    <section>
+      <h2>Our trips</h2>
+      <ul>
+        <li>City breaks in Dublin, Cork and Kilkenny</li>
+        <li>Coastal trips along the Wild Atlantic Way</li>
+        <li>Quiet stays in the countryside</li>
+        <li>Family activities and cultural visits</li>
+      </ul>
+      <a href="experiences.html">View experiences</a>
+    </section>
+    <section>
+      <h2>Holiday checklist</h2>
+      <p>Tick the items you have packed for your trip.</p>
+      <label class="check"><input class="packing-item" type="checkbox" onchange="updateChecklist()"> Raincoat</label>
+      <label class="check"><input class="packing-item" type="checkbox" onchange="updateChecklist()"> Walking shoes</label>
+      <label class="check"><input class="packing-item" type="checkbox" onchange="updateChecklist()"> Phone charger</label>
+      <p id="packingStatus" aria-live="polite">0 of 3 items packed.</p>
+    </section>  </main>
+  <footer><p>&copy; 2026 Emerald Escapes | Nada Abdelazim</p></footer>
+</body>
+</html>

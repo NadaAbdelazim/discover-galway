@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Emerald Escapes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Emerald Escapes</h1>
+    <p>Holidays and short trips around Ireland</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <h2>Contact and booking enquiries</h2>
+    <p>Complete the form below to check your enquiry details. All fields are required.</p>
+    <!-- JavaScript checks the fields when the form is submitted. -->
+    <form id="enquiryForm" onsubmit="return validateForm()" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+      <label for="queryType">Query type</label>
+      <select id="queryType" name="queryType" required>
+        <option value="">Choose a query type</option>
+        <option value="Booking">Booking</option>
+        <option value="Payment">Payment</option>
+        <option value="General Information">General Information</option>
+        <option value="Other">Other</option>
+      </select>
+      <label for="message">Message (at least 20 characters)</label>
+      <textarea id="message" name="message" rows="5" minlength="20" required></textarea>
+      <button type="submit">Check enquiry</button>
+      <p id="formResponse" role="status" aria-live="polite"></p>
+    </form>
+    <p>This is a practice form. It does not send or save your details.</p>  </main>
+  <footer><p>&copy; 2026 Emerald Escapes | Nada Abdelazim</p></footer>
+</body>
+</html>

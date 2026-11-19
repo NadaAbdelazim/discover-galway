@@ -1,0 +1,75 @@
+/* main layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+header {
+  padding: 20px;
+  background: #24613e;
+  color: white;
+  text-align: center;
+}
+nav, footer {
+  padding: 12px;
+  background: #e1eddf;
+  text-align: center;
+}
+nav a { margin: 0 12px; }
+a, h2, h3, .success { color: #24613e; }
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+}
+.check { display: block; }
+
+/* Experience cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+.card:hover { background: #edf5eb; }
+.card img { height: 140px; }
+
+/* filters */
+form { max-width: 500px; }
+form label { display: block; }
+input, select, textarea, button {
+  padding: 8px;
+  font: inherit;
+}
+form input, form select, form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 12px;
+}
+button {
+  border: 0;
+  background: #24613e;
+  color: white;
+  cursor: pointer;
+}
+.error { color: #a11616; }
+
+/* media queries */
+@media (max-width: 800px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 550px) {
+  .cards { grid-template-columns: 1fr; }
+  .filters label, .filters select {
+    display: block;
+    width: 100%;
+  }
+}
