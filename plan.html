@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Plan Your Trip | Discover Galway</title>
+  <meta name="description" content="Plan a visit to Galway City and Connemara with practical travel tips and an interactive holiday budget calculator.">
+</head>
+<body>
+  <header>
+    <h1>Discover Galway</h1>
+    <p>Galway City and Connemara</p>
+  </header>
+  <nav class="d-flex flex-wrap justify-content-center gap-3" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="plan.html">Plan Your Trip</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+<main class="container">
+  <h2>Plan your trip to Galway and Connemara</h2>
+  <p>Whether you are visiting for a weekend or a longer stay, here are a few things to think about before you travel.</p>
+  <div class="row g-3 planning-cards">
+    <div class="col-md-4">
+      <section class="card h-100"><h3>Getting here</h3><p>Galway can be reached by bus or train from Dublin. If you are visiting Connemara, check local bus timetables or consider hiring a car.</p></section>
+    </div>
+    <div class="col-md-4">
+      <section class="card h-100"><h3>Where to stay</h3><p>Galway City is a good base for restaurants and nightlife. Clifden and Letterfrack are useful locations for exploring Connemara.</p></section>
+    </div>
+    <div class="col-md-4">
+      <section class="card h-100"><h3>What to pack</h3><p>The weather can change quickly. Bring a raincoat, comfortable walking shoes and a few warm layers, especially for coastal walks.</p></section>
+    </div>
+  </div>
+  <section class="calculator-section mt-4" aria-labelledby="budgetHeading">
+    <h2 id="budgetHeading">Holiday budget calculator</h2>
+    <p>Enter an estimated cost per person, per day for each category. Accommodation is entered per room, per night. These figures are for planning only, not live prices.</p>
+    <form id="budgetForm" novalidate>
+      <div class="row g-3">
+        <div class="col-sm-6"><label for="travellers" class="form-label">Number of travellers</label><input class="form-control" id="travellers" type="number" min="1" max="30" step="1" value="2" required></div>
+        <div class="col-sm-6"><label for="days" class="form-label">Number of days</label><input class="form-control" id="days" type="number" min="1" max="30" step="1" value="3" required></div>
+        <div class="col-sm-6"><label for="rooms" class="form-label">Number of rooms</label><input class="form-control" id="rooms" type="number" min="0" max="30" step="1" value="1" required></div>
+        <div class="col-sm-6"><label for="accommodation" class="form-label">Accommodation per room, per night (€)</label><input class="form-control" id="accommodation" type="number" min="0" max="10000" step="0.01" value="120" required></div>
+        <div class="col-sm-4"><label for="food" class="form-label">Food per person, per day (€)</label><input class="form-control" id="food" type="number" min="0" max="10000" step="0.01" value="40" required></div>
+        <div class="col-sm-4"><label for="activities" class="form-label">Activities per person, per day (€)</label><input class="form-control" id="activities" type="number" min="0" max="10000" step="0.01" value="25" required></div>
+        <div class="col-sm-4"><label for="transport" class="form-label">Transport per person for whole trip (€)</label><input class="form-control" id="transport" type="number" min="0" max="10000" step="0.01" value="30" required></div>
+      </div>
+      <p class="form-text mt-3">For a three-day trip, accommodation is estimated for two nights.</p>
+      <button class="btn btn-success" type="submit">Calculate budget</button>
+      <button class="btn btn-outline-success ms-2" type="reset">Reset</button>
+      <p id="budgetError" class="error mt-3" role="alert" aria-live="polite"></p>
+    </form>
+    <div id="budgetResult" class="budget-result mt-3" role="status" aria-live="polite" hidden>
+      <h3>Your estimated budget</h3>
+      <p id="budgetBreakdown"></p>
+      <p><strong id="budgetTotal"></strong></p>
+      <p id="budgetPerPerson"></p>
+    </div>
+  </section>
+  <section class="mt-4"><h2>Explore your options</h2><p>Visit our <a href="experiences.html">Experiences page</a> for activities and sample prices, or <a href="contact.html">contact us</a> with a question.</p></section>
+</main>
+  <footer><p>&copy; 2026 Discover Galway</p></footer>
+</body>
+</html>
